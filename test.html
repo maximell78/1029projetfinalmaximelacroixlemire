@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>        
+    <h1>Conversion euro dollar </h1>
+    <h2>Cliquer sur le bouton = pour effectuer la conversion</h2>
+    <form action="non.php" method="get" onsubmit="conversion(this.euro.value) ; return false">
+    <p>
+    <input type="text"   value="1" id="euro"></input>
+    <button type="submit" value="Conversion">Conversion</button>
+    <input type="text"   value="" id="dollar" size="30"></input>
+    </p>
+    </form>
+
+
+
+
+</body>
+<script>
+function conversion1() {
+
+// on efface l'ancienne conversion
+
+document.getElementById("dollar").value = ""
+
+if (eur=="") { alert("pas de bras, pas de chocolat !") } else {
+
+  if (console) console.debug("on convertit " + eur + " euros ")
+
+  taux = 1.408 // au 30 mars 2011
+  dol = eur*taux
+  document.getElementById("dollar").value = dol
+
+} ; // fin de si on a une valeur à traiter
+
+} ; // fin de fonction conversion1
+
+// ######################################################
+
+function conversion2(eurp) { // p comme probable
+
+// ######################################################
+
+// on efface l'ancienne conversion
+
+document.getElementById("dollar").value = ""
+
+if (eurp=="") { alert("pas de bras, pas de chocolat !") } else {
+
+  if (console) console.debug("on convertit " + eurp + " euros ")
+
+  taux = 1.408
+
+
+function conversion(eurp) {
+
+document.getElementById("dollar").value = ""
+
+if (eurp=="") { alert("pas de bras, pas de chocolat !") } else {
+
+  if (console) console.debug("on convertit " + eurp + " euros ")
+
+  taux = 1.408
+
+</script>
+</html>
