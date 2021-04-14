@@ -18,6 +18,10 @@
     color: white;
 }
 
+.calcu{
+  background-color: #fecb70;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */

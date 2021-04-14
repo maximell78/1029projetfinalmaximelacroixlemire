@@ -1,6 +1,6 @@
-<!-- index.html -->
+<!-- converter.html -->
 <!-- Programmé par : Maxime Lacroix-Lemire -->
-<!-- Dernière Mise À  Jour :  2021/03/31 -->
+<!-- Dernière Mise À  Jour :  2021/04/14 -->
 
 <!DOCTYPE html>
 <html lang="fr-ca">
@@ -32,11 +32,6 @@
               <ul class="navbar-nav">
                 <li class="nav-item active">
                   <a class="nav-link text-warning" href="index.html">Accueil</a>
-                </li>                
-                <li class="nav-item">
-                  <a class="nav-link text-warning" href=""
-                    >À propos</a
-                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-warning" href="contact.html">Contact</a>
@@ -57,16 +52,14 @@
         <div class="container-fluid pt-5">
             <div class="row">
                 <div class="col-12 text-center">
-                    <label for="cad"><strong>Valeur CAD : </strong></label>
-                    <input type="text" name="cad" id="cad">
-                    <select name="monnaie" id="devises"></select>
-                </div>
-                <div class="col-12 text-center">
-                    <p id="resultat"></p>
-                </div>
-                <div class="col-12 text-center">
-                    <button onclick="conversion()">Conversion</button>
-                </div>
+                  <form name="conversion">
+                    <label for="cad"><strong> CAD : </strong></label>
+                    <input type="text" name="cad" onChange="conversionCad()"></input>
+                    <label for="usd"><strong>USD : </strong></label>
+                    <input type="text" name="usd" onChange="conversionUsd()"> </input></br>
+                    <button type="button"class="btn-primary">Conversion</button>
+                    <button type="reset" class="btn-secondary">Réinitialiser</button>
+                  </form>
                 <div class="col-12 text-center">
                   <p id="resultat"></p>
                 </div>
@@ -83,7 +76,7 @@
         </div>
     </section>
     <footer>
-        <div class="container-fluid">
+        <div class="container-fluid pt-3">
             <div class="row">
                 <div class="col-12 text-center navbarbg blanc">
                     <p>
@@ -98,34 +91,13 @@
 <script src="bootstrap/js/bootstrap.js"></script>
 
 <script>
-    var select = document.getElementById("devises");
-    var devise = ["USD", "EURO", "BTC", "ETHEREUM", "YEN"];
+      function conversionCad(){
+    document.conversion.usd.value = document.conversion.cad.value * 0.80
 
-    for (var compteur = 0; compteur < devise.length; compteur++) {
-        var optn = devise[compteur];
-        var el = document.createElement("option");
-        el.textContent = optn;
-        el.value = optn;
-        select.appendChild(el);
     }
-
-  var valCad = document.getElementById("cad").value;
-  var monnaie = document.getElementById("devises").value;
-  var result; 
-  function conversion() {
-    if (monnaie === "USD"){
-      index = select.selectedIndex;
-      result = 12*0.80;
-    } else if(monnaie === "EURO"){
-      result = valCad*0.68;
-    } else if(monnaie === "BTC"){
-      result = valCad*0.000014;
-    } else if(monnaie === "ETHEREUM"){
-      result = valCad*0.00038;
-    } else if(monnaie === "YEN"){
-      result = valCad*88.02;
-    }
-    console.log (result);
-} 
+    function conversionUsd(){
+        document.conversion.cad.value = document.conversion.usd.value / 0.80
+    
+        }
 </script>
 </html>

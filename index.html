@@ -1,6 +1,6 @@
 <!-- index.html -->
 <!-- Programmé par : Maxime Lacroix-Lemire -->
-<!-- Dernière Mise À  Jour :  2021/03/31 -->
+<!-- Dernière Mise À  Jour :  2021/04/14 -->
 
 <!DOCTYPE html>
 <html lang="fr-ca">
@@ -34,11 +34,6 @@
                   <a class="nav-link text-warning" href="index.html">Accueil</a>
                 </li>                
                 <li class="nav-item">
-                  <a class="nav-link text-warning" href=""
-                    >À propos</a
-                  >
-                </li>
-                <li class="nav-item">
                   <a class="nav-link text-warning" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
@@ -54,8 +49,9 @@
     </header>
 
     <section>
-        <h1 class="text-center bleu">Budget Max</h1>
-        <img src="" alt="">
+        <div class="calcu text-center">
+            <img src="media/calcu.png" alt="calculatrice">
+        </div>
     </section>
     <section>
         <div class="container-fluid">
@@ -63,9 +59,9 @@
                 <div class="col-6">
                     <p class="pt-5">
                         Site Web spécialisé en finance personnelle et pour la famille. En moins de 20 minutes, Budget Max vous guide dans la création de votre budget personnalisé à travers une interface simple, moderne et intuitive.
-                    </p>
+                    </p>                    
                 </div>
-                <div class="col-6">
+                <div class="col-6 pt-5">
                     <ul>
                         <li>
                             Planification budgétaire complète
@@ -85,28 +81,67 @@
                         <li>
                             Gestion de vos placements et de vos prêts
                         </li>
-                    </ul>
-                    
+                    </ul>                    
                 </div>
-
             </div>
-
         </div>
     </section>
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-12 text-center">                    
+                    <div class="wrapper" data-toggle="modal" data-target="#monModal">
+                        <button class="btn btn-primary"> À propos</button>
+                    </div>
+                </div>
+                <div class="modal" tabindex="-1" role="dialog" id="monModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">À Propos</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body card">
+                                <p class="card">
+                                    Site Web spécialisé en finance personnelle et pour la famille. En moins de 20 minutes, Budget Max vous guide dans la création de votre budget personnalisé à travers une interface simple, moderne et intuitive.
+                                </p>
+                                <ul class="card">
+                                    <li>
+                                        Taille de l'entreprise = 10 personnes
+                                    </li>
+                                    <li>
+                                        Domaine d'activité = Finance
+                                    </li>
+                                    <li>
+                                        Siège Social = Sainte-Martine, Québec
+                                    </li>
+                                    <li>
+                                        PDG de le compagnie = Maxime Lacroix-Lemire
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container pt-4">
+            <div class="row">
                 <div class="col-12 text-center">
                     <a href="inscription.html" class="btn-danger">Inscription</a>
-
                 </div>
-
             </div>
-
         </div>
     </section>
     <footer>
-        <div class="container-fluid">
+        <div class="container-fluid pt-4">
             <div class="row">
                 <div class="col-12 text-center navbarbg blanc">
                     <p>
@@ -119,5 +154,4 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
-<script src="javascript/java.js"></script>
 </html>
